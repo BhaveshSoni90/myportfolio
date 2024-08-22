@@ -6,6 +6,7 @@ import Home from './Home';
 import Education from './Education';
 import Projects from './Project';
 import CV from './CV';
+import SkillsPage from './skills';
 const App = () => {
   const [scrolled, setScrolled] = useState(false);
 
@@ -33,8 +34,7 @@ const App = () => {
         <Projects/>
       </section>
       <section id="skills" className="section">
-        <h2>Skills</h2>
-        <p>Content for the Projects section...</p>
+        <SkillsPage/>
       </section>
       <section id="education" className="section">
         
@@ -43,7 +43,7 @@ const App = () => {
       
       
       <section id="download" className="section">
-        <h2>Download CV</h2>
+        
         <CV/>
       </section>
     </div>

@@ -1,11 +1,10 @@
-// ProjectSection.jsx
 import React from 'react';
 
 // Inline CSS Styles
 const styles = {
   section: {
     padding: '50px 20px',
-    backgroundColor: '#0d6daa',
+    backgroundColor: '#e0f7fa', // Light cyan background
   },
   container: {
     maxWidth: '1200px',
@@ -14,49 +13,56 @@ const styles = {
   title: {
     textAlign: 'center',
     fontSize: '2.5em',
-    marginBottom: '20px',
-    color: '#333',
+    marginBottom: '30px',
+    color: '#00796b', // Dark teal color for the title
   },
   card: {
-    backgroundColor: '#fff',
-    borderRadius: '8px',
-    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+    backgroundColor: '#ffffff', // White background for cards
+    borderRadius: '10px',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
     padding: '20px',
-    marginBottom: '20px',
+    marginBottom: '30px',
+    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+  },
+  cardHover: {
+    transform: 'translateY(-5px)',
+    boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)',
   },
   projectTitle: {
-    fontSize: '2em',
-    marginBottom: '10px',
-    color: '#007bff',
+    fontSize: '1.8em',
+    marginBottom: '15px',
+    color: '#007bff', // Blue color for project titles
   },
   description: {
-    fontSize: '1.1em',
+    fontSize: '1.2em',
     marginBottom: '15px',
-    color: '#555',
+    color: '#333333', // Dark grey color for description
   },
   features: {
     listStyleType: 'disc',
     paddingLeft: '20px',
-    color: '#555',
+    color: '#555555', // Medium grey for list items
     marginBottom: '15px',
   },
   tech: {
-    fontSize: '1em',
-    marginBottom: '15px',
-    color: '#666',
+    fontSize: '1.1em',
+    marginBottom: '20px',
+    color: '#666666', // Lighter grey for technology description
   },
   link: {
     display: 'inline-block',
-    padding: '10px 20px',
+    padding: '12px 24px',
     fontSize: '1.1em',
-    color: '#fff',
+    color: '#ffffff',
     backgroundColor: '#007bff',
-    borderRadius: '4px',
+    borderRadius: '5px',
     textDecoration: 'none',
     textAlign: 'center',
+    transition: 'background-color 0.3s ease, transform 0.3s ease',
   },
   linkHover: {
     backgroundColor: '#0056b3',
+    transform: 'scale(1.05)',
   },
 };
 
@@ -65,7 +71,11 @@ const Projects = () => {
     <section id="projects" style={styles.section}>
       <div style={styles.container}>
         <h2 style={styles.title}>Projects</h2>
-        <div style={styles.card}>
+        <div
+          style={styles.card}
+          onMouseOver={(e) => e.currentTarget.style = {...styles.card, ...styles.cardHover}}
+          onMouseOut={(e) => e.currentTarget.style = styles.card}
+        >
           <h3 style={styles.projectTitle}>CareCrew</h3>
           <p style={styles.description}>
             CareCrew is a comprehensive platform designed to bridge the gap between pet owners and service providers. It allows users to easily connect with professionals offering a variety of pet services, including:
