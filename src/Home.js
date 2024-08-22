@@ -1,39 +1,55 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaLinkedin, FaGithub, FaPhone, FaEnvelope } from 'react-icons/fa';
 import bhavesh from './bhavesh.jpeg';
 
 const Home = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    // Update window width on resize
+    const handleResize = () => setWindowWidth(window.innerWidth);
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Define responsive styles
   const containerStyle = {
     display: 'flex',
+    flexDirection: windowWidth > 768 ? 'row' : 'column', // Use 'row' for larger screens
     alignItems: 'center',
-    justifyContent: 'space-between',
-    height: '56vh',
+    justifyContent: 'center',
+    height: windowWidth > 768 ? '56vh' : 'auto', // Adjust height for larger screens
     backgroundColor: '#534646',
     padding: '6% 20px',
+    marginTop: windowWidth <=768 ? '25%' : '0',
   };
 
   const textStyle = {
     flex: 2,
     fontFamily: 'Arial, sans-serif',
     color: '#fff',
-    justifyContent: 'center',
+    textAlign: 'center',
+    marginBottom: '20px',
   };
 
   const imageStyle = {
     flex: 1,
     display: 'flex',
     justifyContent: 'center',
+    marginBottom: windowWidth <= 768 ? '20px' : '0', // Add margin on small screens
   };
 
   const imgStyle = {
-    maxWidth: '34%',
+    width: windowWidth <= 768 ? '30%' : '39%', // Adjust width based on screen size
     borderRadius: '9%',
   };
 
   const socialIconsStyle = {
-    marginTop: '20px',
     display: 'flex',
+    justifyContent: 'center',
     gap: '15px',
+    marginTop: '20px',
   };
 
   const iconStyle = {

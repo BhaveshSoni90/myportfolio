@@ -1,10 +1,11 @@
-// components/Navbar.js
 import React, { useState, useEffect } from 'react';
 import './Navbar.css'; // Ensure this CSS file is properly created
 import ThemeToggle from './ThemeToggle'; // Import the ThemeToggle component
+import { FaBars, FaTimes } from 'react-icons/fa'; // Import icons for the hamburger menu
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,18 +19,29 @@ const Navbar = () => {
     };
   }, []);
 
+  const handleMenuToggle = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const handleLinkClick = () => {
+    setMenuOpen(false); // Close menu on link click
+  };
+
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container">
         <h1 className="portfolio-name">Bhavesh Soni</h1>
-        <ul className="nav-links">
-        <li><a href="#home">Introduction</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#download" className="download-cv">Download CV</a></li>
+        <div className="menu-toggle" onClick={handleMenuToggle}>
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </div>
+        <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
+          <li><a href="#home" onClick={handleLinkClick}>Introduction</a></li>
+          <li><a href="#projects" onClick={handleLinkClick}>Projects</a></li>
+          <li><a href="#skills" onClick={handleLinkClick}>Skills</a></li>
+          <li><a href="#education" onClick={handleLinkClick}>Education</a></li>
+          <li><a href="#download" className="download-cv" onClick={handleLinkClick}>Download CV</a></li>
         </ul>
-      {/* Add the ThemeToggle component here */}
+        
       </div>
     </nav>
   );
