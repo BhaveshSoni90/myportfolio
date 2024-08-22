@@ -2,31 +2,32 @@ import React from 'react';
 
 // Define basic button styles using JavaScript object
 const buttonStyle = {
+  display: 'inline-block',
   padding: '12px 24px',
   fontSize: '16px',
   fontFamily: 'Arial, sans-serif',
-  border: '2px solid #007bff',
-  backgroundColor: '#ffffff',
-  color: '#007bff',
+  border: 'none',
+  backgroundColor: '#007bff',
+  color: '#ffffff',
   cursor: 'pointer',
-  borderRadius: '6px',
+  borderRadius: '5px',
   textAlign: 'center',
   textDecoration: 'none',
+  fontWeight: 'bold',
+  boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
+  transition: 'all 0.3s ease',
   textTransform: 'uppercase',
-  transition: 'background-color 0.3s, color 0.3s, border-color 0.3s',
 };
 
 const buttonHoverStyle = {
-  backgroundColor: '#007bff',
-  color: '#ffffff',
-  borderColor: '#007bff',
+  backgroundColor: '#0056b3', // Darker shade for hover
 };
 
 const buttonContainerStyle = {
   display: 'flex',
   flexWrap: 'wrap',
   gap: '15px',
-  justifyContent: 'center',
+  justifyContent: 'left',
   marginTop: '10px',
 };
 
@@ -41,13 +42,14 @@ const containerStyle = {
 
 const headingStyle = {
   fontSize: '2.5em',
-  color: '#007bff', // Blue color for the heading
+  color: '#333333', // Blue color for the heading
   marginBottom: '30px',
 };
 
 const sectionStyle = {
   margin: '20px 0',
   width: '100%',
+  alignItems:'left',
 };
 
 const sectionTitleStyle = {
@@ -70,32 +72,32 @@ const SkillsPage = () => {
         <div style={buttonContainerStyle}>
           <button
             style={buttonStyle}
-            onMouseOver={(e) => e.currentTarget.style = { ...buttonStyle, ...buttonHoverStyle }}
-            onMouseOut={(e) => e.currentTarget.style = buttonStyle}
+            onMouseOver={(e) => e.currentTarget.style.backgroundColor = buttonHoverStyle.backgroundColor}
+            onMouseOut={(e) => e.currentTarget.style.backgroundColor = buttonStyle.backgroundColor}
             onClick={() => handleClick('https://developer.mozilla.org/en-US/docs/Web/HTML')}
           >
             HTML5
           </button>
           <button
             style={buttonStyle}
-            onMouseOver={(e) => e.currentTarget.style = { ...buttonStyle, ...buttonHoverStyle }}
-            onMouseOut={(e) => e.currentTarget.style = buttonStyle}
+            onMouseOver={(e) => e.currentTarget.style.backgroundColor = buttonHoverStyle.backgroundColor}
+            onMouseOut={(e) => e.currentTarget.style.backgroundColor = buttonStyle.backgroundColor}
             onClick={() => handleClick('https://developer.mozilla.org/en-US/docs/Web/CSS')}
           >
             CSS
           </button>
           <button
             style={buttonStyle}
-            onMouseOver={(e) => e.currentTarget.style = { ...buttonStyle, ...buttonHoverStyle }}
-            onMouseOut={(e) => e.currentTarget.style = buttonStyle}
+            onMouseOver={(e) => e.currentTarget.style.backgroundColor = buttonHoverStyle.backgroundColor}
+            onMouseOut={(e) => e.currentTarget.style.backgroundColor = buttonStyle.backgroundColor}
             onClick={() => handleClick('https://developer.mozilla.org/en-US/docs/Web/JavaScript')}
           >
             JavaScript
           </button>
           <button
             style={buttonStyle}
-            onMouseOver={(e) => e.currentTarget.style = { ...buttonStyle, ...buttonHoverStyle }}
-            onMouseOut={(e) => e.currentTarget.style = buttonStyle}
+            onMouseOver={(e) => e.currentTarget.style.backgroundColor = buttonHoverStyle.backgroundColor}
+            onMouseOut={(e) => e.currentTarget.style.backgroundColor = buttonStyle.backgroundColor}
             onClick={() => handleClick('https://cplusplus.com/doc/tutorial/')}
           >
             C++
@@ -108,32 +110,32 @@ const SkillsPage = () => {
         <div style={buttonContainerStyle}>
           <button
             style={buttonStyle}
-            onMouseOver={(e) => e.currentTarget.style = { ...buttonStyle, ...buttonHoverStyle }}
-            onMouseOut={(e) => e.currentTarget.style = buttonStyle}
+            onMouseOver={(e) => e.currentTarget.style.backgroundColor = buttonHoverStyle.backgroundColor}
+            onMouseOut={(e) => e.currentTarget.style.backgroundColor = buttonStyle.backgroundColor}
             onClick={() => handleClick('https://reactjs.org/docs/getting-started.html')}
           >
             React
           </button>
           <button
             style={buttonStyle}
-            onMouseOver={(e) => e.currentTarget.style = { ...buttonStyle, ...buttonHoverStyle }}
-            onMouseOut={(e) => e.currentTarget.style = buttonStyle}
+            onMouseOver={(e) => e.currentTarget.style.backgroundColor = buttonHoverStyle.backgroundColor}
+            onMouseOut={(e) => e.currentTarget.style.backgroundColor = buttonStyle.backgroundColor}
             onClick={() => handleClick('https://nodejs.org/en/docs/')}
           >
             Node.js
           </button>
           <button
             style={buttonStyle}
-            onMouseOver={(e) => e.currentTarget.style = { ...buttonStyle, ...buttonHoverStyle }}
-            onMouseOut={(e) => e.currentTarget.style = buttonStyle}
+            onMouseOver={(e) => e.currentTarget.style.backgroundColor = buttonHoverStyle.backgroundColor}
+            onMouseOut={(e) => e.currentTarget.style.backgroundColor = buttonStyle.backgroundColor}
             onClick={() => handleClick('https://www.mongodb.com/docs/')}
           >
             MongoDB
           </button>
           <button
             style={buttonStyle}
-            onMouseOver={(e) => e.currentTarget.style = { ...buttonStyle, ...buttonHoverStyle }}
-            onMouseOut={(e) => e.currentTarget.style = buttonStyle}
+            onMouseOver={(e) => e.currentTarget.style.backgroundColor = buttonHoverStyle.backgroundColor}
+            onMouseOut={(e) => e.currentTarget.style.backgroundColor = buttonStyle.backgroundColor}
             onClick={() => handleClick('https://expressjs.com/en/starter/installing.html')}
           >
             Express
@@ -146,24 +148,24 @@ const SkillsPage = () => {
         <div style={buttonContainerStyle}>
           <button
             style={buttonStyle}
-            onMouseOver={(e) => e.currentTarget.style = { ...buttonStyle, ...buttonHoverStyle }}
-            onMouseOut={(e) => e.currentTarget.style = buttonStyle}
+            onMouseOver={(e) => e.currentTarget.style.backgroundColor = buttonHoverStyle.backgroundColor}
+            onMouseOut={(e) => e.currentTarget.style.backgroundColor = buttonStyle.backgroundColor}
             onClick={() => handleClick('https://code.visualstudio.com/docs')}
           >
             VSCode
           </button>
           <button
             style={buttonStyle}
-            onMouseOver={(e) => e.currentTarget.style = { ...buttonStyle, ...buttonHoverStyle }}
-            onMouseOut={(e) => e.currentTarget.style = buttonStyle}
+            onMouseOver={(e) => e.currentTarget.style.backgroundColor = buttonHoverStyle.backgroundColor}
+            onMouseOut={(e) => e.currentTarget.style.backgroundColor = buttonStyle.backgroundColor}
             onClick={() => handleClick('https://github.com/docs')}
           >
             GitHub
           </button>
           <button
             style={buttonStyle}
-            onMouseOver={(e) => e.currentTarget.style = { ...buttonStyle, ...buttonHoverStyle }}
-            onMouseOut={(e) => e.currentTarget.style = buttonStyle}
+            onMouseOver={(e) => e.currentTarget.style.backgroundColor = buttonHoverStyle.backgroundColor}
+            onMouseOut={(e) => e.currentTarget.style.backgroundColor = buttonStyle.backgroundColor}
             onClick={() => handleClick('https://canvas.instructure.com/')}
           >
             Canvas
@@ -176,16 +178,16 @@ const SkillsPage = () => {
         <div style={buttonContainerStyle}>
           <button
             style={buttonStyle}
-            onMouseOver={(e) => e.currentTarget.style = { ...buttonStyle, ...buttonHoverStyle }}
-            onMouseOut={(e) => e.currentTarget.style = buttonStyle}
+            onMouseOver={(e) => e.currentTarget.style.backgroundColor = buttonHoverStyle.backgroundColor}
+            onMouseOut={(e) => e.currentTarget.style.backgroundColor = buttonStyle.backgroundColor}
             onClick={() => handleClick('https://www.microsoft.com/en-us/windows')}
           >
             Windows
           </button>
           <button
             style={buttonStyle}
-            onMouseOver={(e) => e.currentTarget.style = { ...buttonStyle, ...buttonHoverStyle }}
-            onMouseOut={(e) => e.currentTarget.style = buttonStyle}
+            onMouseOver={(e) => e.currentTarget.style.backgroundColor = buttonHoverStyle.backgroundColor}
+            onMouseOut={(e) => e.currentTarget.style.backgroundColor = buttonStyle.backgroundColor}
             onClick={() => handleClick('https://www.linux.org/docs/')}
           >
             Linux
