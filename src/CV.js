@@ -7,7 +7,7 @@ GlobalWorkerOptions.workerSrc = '/pdfjs-dist/build/pdf.worker.min.js';
 // Path to the PDF file in the public directory
 const filePath = '/Bhavesh-Soni.pdf';
 
-const PdfPreview = () => {
+const CV = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const canvasRef = useRef(null);
@@ -95,4 +95,4 @@ const styles = {
   },
 };
 
-export default PdfPreview;
+export default CV;
