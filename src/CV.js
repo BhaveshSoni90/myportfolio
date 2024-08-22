@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { getDocument, GlobalWorkerOptions } from 'pdfjs-dist';
 
-// Set the worker path (adjust path if necessary)
+// Set the worker path
 GlobalWorkerOptions.workerSrc = '/pdfjs-dist/build/pdf.worker.min.js';
 
-// Path to the PDF file in the public directory
+// Path to the PDF file
 const filePath = '/Bhavesh-Soni.pdf';
 
 const CV = () => {
@@ -51,7 +51,13 @@ const CV = () => {
 
   return (
     <div style={styles.container}>
-      
+      {loading && <p>Loading PDF...</p>}
+      {error && <p>Error: {error}</p>}
+      {!loading && !error && (
+        <div style={styles.previewContainer}>
+          <canvas ref={canvasRef} style={styles.canvas}></canvas>
+        </div>
+      )}
       <a
         href={filePath}
         download="Bhavesh-Soni.pdf"
