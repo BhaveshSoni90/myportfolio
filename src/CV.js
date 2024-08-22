@@ -51,6 +51,13 @@ const CV = () => {
 
   return (
     <div style={styles.container}>
+      <div style={styles.intro}>
+        <h2 style={styles.introTitle}>My Curriculum Vitae</h2>
+        <p style={styles.introText}>
+          Here you can find a detailed overview of my professional experience, skills, and accomplishments. 
+          Feel free to download my CV to get more information about my background and qualifications.
+        </p>
+      </div>
       
       <a
         href={filePath}
@@ -72,12 +79,23 @@ const styles = {
     padding: '20px',
     backgroundColor: '#f0f0f0',
   },
-  previewContainer: {
-    marginBottom: '20px',
+  intro: {
     textAlign: 'center',
+    marginBottom: '20px',
+    padding: '20px',
+    backgroundColor: '#ffffff',
+    borderRadius: '8px',
+    boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
   },
-  canvas: {
-    border: '1px solid #ddd',
+  introTitle: {
+    fontSize: '1.8em',
+    color: '#333',
+    marginBottom: '10px',
+  },
+  introText: {
+    fontSize: '1.2em',
+    color: '#555',
+    marginBottom: '20px',
   },
   button: {
     display: 'inline-block',
