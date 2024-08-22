@@ -51,19 +51,13 @@ const CV = () => {
 
   return (
     <div style={styles.container}>
-      {loading && <p>Loading PDF...</p>}
-      {error && <p>Error: {error}</p>}
-      {!loading && !error && (
-        <div style={styles.previewContainer}>
-          <canvas ref={canvasRef} style={styles.canvas}></canvas>
-        </div>
-      )}
+      
       <a
         href={filePath}
         download="Bhavesh-Soni.pdf"
         style={styles.button}
       >
-        Download PDF
+        Download CV
       </a>
     </div>
   );
