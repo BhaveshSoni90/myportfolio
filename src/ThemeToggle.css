@@ -1,0 +1,15 @@
+/* components/ThemeToggle.css */
+.theme-toggle {
+  background-color: #ffd700; /* Button background color */
+  color: black;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: #e6c55f; /* Button hover color */
+}

@@ -14,14 +14,14 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #bed1f7;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(96, 88, 88);
 }
 
 .App-link {
@@ -36,3 +36,33 @@
     transform: rotate(360deg);
   }
 }
+/* App.css */
+html {
+  scroll-behavior: smooth;
+}
+
+.section {
+  /* padding: 60px 20px; */
+  /* min-height: 100vh; */
+  color: rgb(228, 234, 239);
+  padding: 20px; /* Reduce padding to fit more content within viewport */
+  box-sizing: border-box;
+}
+#home { background-color: #534646;}
+#education { background-color: #534646; }
+#projects { background-color:#534646; }
+#contact { background-color: #534646; }
+#download { background-color: #534646; }
+#skills { background-color: #534646; }
+
+
+
+/* body.light-mode {
+  background-color: #784343;
+  color: #000000;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+} */
