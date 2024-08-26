@@ -100,7 +100,7 @@
     transition: max-height 0.3s ease;
     max-height: 0;
     overflow: hidden;
-    padding: 0;
+    padding: 8%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 

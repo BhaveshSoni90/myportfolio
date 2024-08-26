@@ -13,7 +13,7 @@ const styles = {
   title: {
     textAlign: 'center',
     fontSize: '2.5em',
-    marginBottom: '30px',
+    marginBottom: '40px',
     color: '#00796b', // Dark teal color for the title
   },
   card: {
@@ -23,10 +23,12 @@ const styles = {
     padding: '20px',
     marginBottom: '30px',
     transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+    cursor: 'pointer', // Indicate that the card is interactive
   },
   cardHover: {
-    transform: 'translateY(-5px)',
-    boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)',
+    transform: 'scale(1.05)', // Slight zoom effect
+    boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)', // Enhanced shadow on hover
+    zIndex: 1, // Ensure the card appears on top
   },
   projectTitle: {
     fontSize: '1.8em',
@@ -73,8 +75,18 @@ const Projects = () => {
         <h2 style={styles.title}>Projects</h2>
         <div
           style={styles.card}
-          onMouseOver={(e) => e.currentTarget.style = {...styles.card, ...styles.cardHover}}
-          onMouseOut={(e) => e.currentTarget.style = styles.card}
+          onMouseOver={(e) => {
+            const target = e.currentTarget;
+            target.style.transform = 'scale(1.05)';
+            target.style.boxShadow = '0 8px 16px rgba(0, 0, 0, 0.2)';
+            target.style.zIndex = '1'; // Ensure the card stays on top
+          }}
+          onMouseOut={(e) => {
+            const target = e.currentTarget;
+            target.style.transform = 'scale(1)';
+            target.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+            target.style.zIndex = '0'; // Reset z-index
+          }}
         >
           <h3 style={styles.projectTitle}>CareCrew</h3>
           <p style={styles.description}>
@@ -94,8 +106,14 @@ const Projects = () => {
             style={styles.link}
             target="_blank"
             rel="noopener noreferrer"
-            onMouseOver={(e) => e.currentTarget.style.backgroundColor = styles.linkHover.backgroundColor}
-            onMouseOut={(e) => e.currentTarget.style.backgroundColor = styles.link.backgroundColor}
+            onMouseOver={(e) => {
+              e.currentTarget.style.backgroundColor = styles.linkHover.backgroundColor;
+              e.currentTarget.style.transform = styles.linkHover.transform;
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.backgroundColor = styles.link.backgroundColor;
+              e.currentTarget.style.transform = 'scale(1)';
+            }}
           >
             View Project
           </a>

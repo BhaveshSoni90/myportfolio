@@ -7,6 +7,7 @@ import Education from './Education';
 import Projects from './Project';
 import CV from './CV';
 import SkillsPage from './skills';
+import ExperienceComponent from './exper';
 const App = () => {
   const [scrolled, setScrolled] = useState(false);
 
@@ -29,10 +30,15 @@ const App = () => {
         
         <Home/>
       </section>
+      <section id="exp" className="section">
+        
+        <ExperienceComponent/>
+      </section>
       <section id="projects" className="section">
         
         <Projects/>
       </section>
+      
       <section id="skills" className="section">
         <SkillsPage/>
       </section>
