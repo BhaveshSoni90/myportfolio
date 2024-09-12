@@ -76,7 +76,7 @@ const Home = () => {
         <div style={socialIconsStyle}>
           <FaLinkedin
             style={iconStyle}
-            onClick={() => handleIconClick('www.linkedin.com/in/bhaveshsoni90')}
+            onClick={() => handleIconClick('https://linkedin.com/in/bhaveshsoni90')}
             title="LinkedIn"
           />
           <FaGithub
