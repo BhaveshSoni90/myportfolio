@@ -71,8 +71,7 @@ const Home = () => {
       <div style={textStyle}>
         <h1>Hello I'm Bhavesh,</h1>
         <p>
-          As an MCA graduate with a keen interest in full-stack web development, I have cultivated a solid skill set in HTML, CSS, and JavaScript. My expertise extends to frameworks such as React, Node.js, and MongoDB, and I am also proficient in C++. I excel at creating user-centric websites that are both dynamic and responsive. Alongside my technical skills, I possess strong soft skills including effective communication, team leadership, and collaborative work. These attributes enable me to work seamlessly with teams and drive projects to successful completion. For an in-depth look at my work, please refer to the project section of my portfolio.
-        </p>
+Full-stack web developer with hands-on experience in building responsive and scalable web applications using the MERN stack (MongoDB, Express.js, React, Node.js). Proficient in both frontend and backend development, with a strong understanding of clean code practices, API integration, and UI/UX principles. Experienced in working with agile teams to deliver high-quality features and maintain production-ready systems. Strong communication and collaboration skills with the ability to lead and contribute effectively in team environments.        </p>
         <div style={socialIconsStyle}>
           <FaLinkedin
             style={iconStyle}
