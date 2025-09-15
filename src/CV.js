@@ -5,7 +5,7 @@ import { getDocument, GlobalWorkerOptions } from 'pdfjs-dist';
 GlobalWorkerOptions.workerSrc = '/pdfjs-dist/build/pdf.worker.min.js';
 
 // Path to the PDF file
-const filePath = '/Bhavesh-Soni.pdf';
+const filePath = '/BhaveshSoni.pdf';
 
 const CV = () => {
   const [loading, setLoading] = useState(true);
