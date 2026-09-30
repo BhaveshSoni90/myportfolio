@@ -1,23 +1,23 @@
-// App.js
 import React, { useEffect, useState } from 'react';
 import Navbar from './Navbar';
-import './App.css'; // Your other styles
+import './App.css';
 import Home from './Home';
-import Education from './Education';
-import Projects from './Project';
-import CV from './CV';
-import SkillsPage from './skills';
+import Services from './Services';
 import ExperienceComponent from './exper';
+import Projects from './Project';
+import SkillsPage from './skills';
+import Education from './Education';
+import CV from './CV';
+
 const App = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50); // Adjust the scroll threshold as needed
+      setScrolled(window.scrollY > 30);
     };
 
     window.addEventListener('scroll', handleScroll);
-
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -27,30 +27,25 @@ const App = () => {
     <div>
       <Navbar className={scrolled ? 'scrolled' : ''} />
       <section id="home" className="section">
-        
-        <Home/>
+        <Home />
+      </section>
+      <section id="services" className="section">
+        <Services />
       </section>
       <section id="exp" className="section">
-        
-        <ExperienceComponent/>
+        <ExperienceComponent />
       </section>
       <section id="projects" className="section">
-        
-        <Projects/>
+        <Projects />
       </section>
-      
       <section id="skills" className="section">
-        <SkillsPage/>
+        <SkillsPage />
       </section>
       <section id="education" className="section">
-        
-        <Education/>
+        <Education />
       </section>
-      
-      
       <section id="download" className="section">
-        
-        <CV/>
+        <CV />
       </section>
     </div>
   );
