@@ -1,0 +1,19 @@
+/* home.css */
+.hero-grid-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 30px;
+  align-items: stretch;
+}
+
+@media (max-width: 900px) {
+  .hero-grid-container {
+    grid-template-columns: 1fr;
+  }
+  .side-column {
+    order: -1;
+  }
+}
